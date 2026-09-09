@@ -1,0 +1,194 @@
+html {
+    font-size: 100%; /* base para las unidades rem: 1rem = 16px */
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Scoutie Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+
+.tickerArriba {
+    border-top: 1px solid orange;
+    font-family: monospace;
+    color: #f1a100;
+    text-align: center;
+    padding: 0.5rem;
+
+    font-size: 0.875rem;
+}
+.tickerAbajo {
+    border-bottom: 1px solid orange;
+    font-family: monospace;
+    color: #f1a100;
+    text-align: center;
+    padding: 0.5rem;
+
+    font-size: 0.875rem;
+}
+.tickerArriba:hover{
+    color: #50f100;
+}
+.tickerAbajo:hover{
+    color: #50f100;
+}
+
+
+main, header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+}
+nav ul li {
+    font-size: 1.25rem;
+
+}
+nav ul li a {
+    display: block;
+    padding: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li:hover{
+      background: orange;
+}
+
+.contexto {
+     
+    flex-direction: column; /* Si existen varios elemento uno de bajo de otro */
+    display: flex; 
+    justify-content: center;/*Centra horizontalmente*/
+    align-items: center; /* Centra verticalmente */
+    min-height: 80vh;  
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+
+
+div.evento-tarjeta {
+    object-fit: cover; /*para que la imagen se recorte y llene ese espacio sin deformarse*/
+   
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #8a7fff31 ;
+
+   
+    vertical-align: top;
+    margin: 20px;
+    }
+
+
+.evento-link img {
+    float: right;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center; /*Centra el recorte para que no se pierda lo que quiero capturar */
+}
+
+ .evento-info  {
+
+    padding: 5%;
+    padding-top: 25px;
+ }
+
+
+.galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+   
+    gap: 16px;
+}
+.galeria-fotos > div  {
+    flex: 1 1 250px ; /* cada foto ocupa minimo 250px y se reparte entre el espacio que sobra */
+    margin: 0;
+}
+.galeria-fotos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.evento-header img {
+    display:  block;
+    width: 100%;
+    height: 60vh;
+    min-height: 250px;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 900px) {
+    .galeria-fotos > div {
+        flex-basis: 200px;
+    }
+    .evento-link img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul{
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    .evento-header img {
+        height: 45vh;
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-fotos > div {
+        flex-basis: 140px;
+    }
+    .galeria-fotos img {
+        height: 140px;
+    }
+    .evento-link img {
+        height: 160px;
+    }
+    nav ul li a {
+        padding: 0.75rem;
+    }
+}
